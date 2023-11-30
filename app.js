@@ -13,5 +13,5 @@ function calcularImpuesto() {
     }
 
     const resultadoElement = document.getElementById('resultado');
-    resultadoElement.innerText = `Impuesto sobre la Renta: $${impuesto.toFixed(2)}`;
+    resultadoElement.innerText = `Impuesto sobre la Renta: C$${impuesto.toFixed(2)}`;
 }
