@@ -4,10 +4,14 @@ function calcularImpuesto() {
 
     const ingresoGravable = salarioBruto - subsidioLaboral;
 
-    // Aquí deberías implementar la lógica para calcular el impuesto sobre la renta
-    // Puedes usar diferentes tasas de impuestos según rangos de ingresos
+    // Lógica simplificada de tasas de impuestos (debes ajustar según las leyes fiscales de Nicaragua)
+    let impuesto;
+    if (ingresoGravable <= 10000) {
+        impuesto = ingresoGravable * 0.1; // 10% de impuesto
+    } else {
+        impuesto = ingresoGravable * 0.15; // 15% de impuesto para ingresos superiores a 10000
+    }
 
-    // En este ejemplo, simplemente mostramos el ingreso gravable
     const resultadoElement = document.getElementById('resultado');
-    resultadoElement.innerText = `Ingreso Gravable: C$${ingresoGravable.toFixed(2)}`;
+    resultadoElement.innerText = `Impuesto sobre la Renta: $${impuesto.toFixed(2)}`;
 }
